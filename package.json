@@ -1,6 +1,6 @@
 {
   "name": "freezer.jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Object.freeze, isFrozen bindings for JSX! let it go~ ",
   "main": "freezer.js",
   "scripts": {
