@@ -1,0 +1,27 @@
+{
+  "name": "freezer.jsx",
+  "version": "0.0.1",
+  "description": "Object.freeze, isFrozen bindings for JSX! let it go~ ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jsx --test test/freezer.jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosuke-furukawa/freezer.jsx"
+  },
+  "keywords": [
+    "Object.freeze",
+    "Object.isFrozen",
+    "jsx"
+  ],
+  "author": "yosuke-furukawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yosuke-furukawa/freezer.jsx/issues"
+  },
+  "homepage": "https://github.com/yosuke-furukawa/freezer.jsx",
+  "devDependencies": {
+    "jsx": "~0.9.87"
+  }
+}
