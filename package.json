@@ -2,7 +2,7 @@
   "name": "freezer.jsx",
   "version": "0.1.0",
   "description": "Object.freeze, isFrozen bindings for JSX! let it go~ ",
-  "main": "index.js",
+  "main": "freezer.js",
   "scripts": {
     "test": "jsx --test test/freezer.jsx"
   },
