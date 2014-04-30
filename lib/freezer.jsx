@@ -1,7 +1,7 @@
 native class Freezer {
-  static function freeze(obj:variant) : void;
-  static function deepFreeze(obj:variant) : void;
-  static function isFrozen(obj:variant) : boolean;
+  static function freeze.<T>(obj:T) : T;
+  static function deepFreeze.<T>(obj:T) : T;
+  static function isFrozen.<T>(obj:T) : boolean;
 } = """
   {
     freeze: Object.freeze,
@@ -15,6 +15,7 @@ native class Freezer {
         }
         deepFreeze(prop);
       }
+      return o;
     },
     isFrozen: Object.isFrozen
   };

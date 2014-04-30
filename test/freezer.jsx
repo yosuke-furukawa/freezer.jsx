@@ -6,7 +6,7 @@ class _Test extends TestCase {
     var obj = {
       "abc" : 123,
       "def" : 456
-    };
+    } as Map.<number>;
     Freezer.freeze(obj);
     obj["abc"] = 789;
     this.expect(obj["abc"]).toBe(123);
@@ -32,5 +32,16 @@ class _Test extends TestCase {
     Freezer.freeze(obj);
     var isFrozen = Freezer.isFrozen(obj);
     this.expect(isFrozen).toBe(true);
+  }
+  function testReturnValueIsSame(): void {
+    var obj = Freezer.deepFreeze({
+      "abc" : 123,
+      "def" : {
+        "ghi" : 456
+      },
+    });
+    var isFrozen = Freezer.isFrozen(obj);
+    this.expect(isFrozen).toBe(true);
+    this.expect(obj["abc"]).toBe(123);
   }
 }
