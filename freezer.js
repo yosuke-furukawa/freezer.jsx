@@ -1,4 +1,4 @@
-// generatedy by JSX compiler 0.9.87 (2014-04-14 14:55:26 +0900; a7ed940de88ce1292be44c3a0e9de275b3becbe1)
+// generatedy by JSX compiler 0.9.79 (2014-02-24 12:54:26 +0900; b5dd59d9f43bbf0e1136c6419bf44827e55702c8)
 var JSX = {};
 (function (JSX) {
 /**
@@ -84,15 +84,6 @@ function $__jsx_ippostdec(o, p) {
 	return v;
 }
 
-/**
- * non-inlined version of Array#each
- */
-function $__jsx_forEach(o, f) {
-	var l = o.length;
-	for (var i = 0; i < l; ++i)
-		f(o[i]);
-}
-
 /*
  * global functions, renamed to avoid conflict with local variable names
  */
@@ -146,7 +137,8 @@ JSX.DEBUG = true;
 var GeneratorFunction$0 = 
 (function () {
   try {
-    return Function('import {GeneratorFunction} from "std:iteration"; return GeneratorFunction')();
+    eval('import {GeneratorFunction} from "std:iteration"');
+    return GeneratorFunction;
   } catch (e) {
     return function GeneratorFunction () {};
   }
@@ -200,6 +192,7 @@ var Freezer$0 =
         }
         deepFreeze(prop);
       }
+      return o;
     },
     isFrozen: Object.isFrozen
   };
@@ -210,4 +203,3 @@ var $__jsx_classMap = {};
 module.exports = Freezer$0;
 
 })(JSX);
-
