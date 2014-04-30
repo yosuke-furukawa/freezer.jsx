@@ -3,6 +3,8 @@ native class Freezer {
   static function deepFreeze.<T>(obj:T) : T;
   static function isFrozen.<T>(obj:T) : boolean;
 } = """
+  (function() {
+  var Freezer =
   {
     freeze: Object.freeze,
     deepFreeze: function deepFreeze(o) {
@@ -19,4 +21,12 @@ native class Freezer {
     },
     isFrozen: Object.isFrozen
   };
+  if (typeof module !== 'undefined' && module.exports) {
+    // Node.js
+    module.exports = Freezer;
+  } else {
+    window.Freezer = Freezer;
+  }
+  return Freezer;
+  }())
 """;

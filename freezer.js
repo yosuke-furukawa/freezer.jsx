@@ -180,6 +180,8 @@ var __jsx_generator_object$0 =
   return __jsx_generator_object;
 }());
 var Freezer$0 = 
+  (function() {
+  var Freezer =
   {
     freeze: Object.freeze,
     deepFreeze: function deepFreeze(o) {
@@ -196,10 +198,17 @@ var Freezer$0 =
     },
     isFrozen: Object.isFrozen
   };
+  if (typeof module !== 'undefined' && module.exports) {
+    // Node.js
+    module.exports = Freezer;
+  } else {
+    window.Freezer = Freezer;
+  }
+  return Freezer;
+  }())
 ;
 
 var $__jsx_classMap = {};
 
-module.exports = Freezer$0;
 
 })(JSX);
